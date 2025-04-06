@@ -1,0 +1,17 @@
+title: Free Joomla! Extensions by naftee.com
+description: Dropbox Embed Content plugin allows you to embed Dropbox files and folders directly into Joomla!
+url: "https://naftee.com"
+baseurl: "/Dropboxembed"
+github_username: brettvac
+
+author:
+  twitter: naftee
+  name: Brett Vachon
+
+google_analytics: G-DP5DG417G7
+
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

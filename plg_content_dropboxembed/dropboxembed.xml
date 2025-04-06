@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="content" method="upgrade">
+  <name>plg_content_dropboxembed</name>
+  <author>Brett Vachon</author>
+  <creationDate>2025-03-21</creationDate>
+  <copyright>(C) Brett Vachon.</copyright>
+  <license>GNU General Public License version 2</license>
+  <authorUrl>https://naftee.com</authorUrl>
+  <version>1.0</version>
+  <description>PLG_CONTENT_DROPBOXEMBED_DESCRIPTION</description>
+  <namespace path="src">Naftee\Plugin\Content\Dropboxembed</namespace>
+  <scriptfile>script.php</scriptfile>
+  <files>
+    <folder plugin="dropboxembed">services</folder>
+    <folder>src</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/plg_content_dropboxembed.ini</language>
+    <language tag="en-GB">language/en-GB/plg_content_dropboxembed.sys.ini</language>
+    <language tag="fr-FR">language/fr-FR/plg_content_dropboxembed.ini</language>
+    <language tag="fr-FR">language/fr-FR/plg_content_dropboxembed.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field 
+          name="app_key" 
+          type="text" 
+          label="PLG_CONTENT_DROPBOXEMBED_APP_KEY_LABEL"
+          description="PLG_CONTENT_DROPBOXEMBED_APP_KEY_DESC"
+          default=""
+          size="40"
+        />
+
+        <field 
+          name="zoom" 
+          type="radio" 
+          label="PLG_CONTENT_DROPBOXEMBED_ZOOM_LABEL"
+          description="PLG_CONTENT_DROPBOXEMBED_ZOOM_DESC"
+          default="best"
+          layout="joomla.form.field.radio.switcher" >
+          <option value="best">PLG_CONTENT_DROPBOXEMBED_ZOOM_BEST</option>
+          <option value="fit">PLG_CONTENT_DROPBOXEMBED_ZOOM_FIT</option>
+        </field>
+
+        <field 
+          name="view" 
+          type="radio" 
+          label="PLG_CONTENT_DROPBOXEMBED_VIEW_LABEL"
+          description="PLG_CONTENT_DROPBOXEMBED_VIEW_DESC"
+          default="list"
+          layout="joomla.form.field.radio.switcher" >
+          <option value="list">PLG_CONTENT_DROPBOXEMBED_VIEW_LIST</option>
+          <option value="grid">PLG_CONTENT_DROPBOXEMBED_VIEW_GRID</option>
+        </field>
+
+        <field 
+          name="headerSize" 
+          type="radio" 
+          label="PLG_CONTENT_DROPBOXEMBED_HEADERSIZE_LABEL"
+          description="PLG_CONTENT_DROPBOXEMBED_HEADERSIZE_DESC"
+          default="normal"
+          layout="joomla.form.field.radio.switcher" >
+          <option value="normal">PLG_CONTENT_DROPBOXEMBED_HEADERSIZE_NORMAL</option>
+          <option value="small">PLG_CONTENT_DROPBOXEMBED_HEADERSIZE_SMALL</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server name="example.com" type="extension">https://downloads.example.com/plg_content_dropboxembed.xml</server>
+  </updateservers>
+</extension>
