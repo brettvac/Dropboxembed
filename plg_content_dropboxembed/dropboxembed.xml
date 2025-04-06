@@ -68,6 +68,6 @@
     </fields>
   </config>
   <updateservers>
-    <server name="example.com" type="extension">https://downloads.example.com/plg_content_dropboxembed.xml</server>
+    <server name="Dropbox Embed" type="extension">https://raw.githubusercontent.com/brettvac/Dropboxembed/refs/heads/main/update/updates.xml</server>
   </updateservers>
 </extension>
