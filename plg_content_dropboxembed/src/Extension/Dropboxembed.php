@@ -9,7 +9,7 @@ namespace Naftee\Plugin\Content\Dropboxembed\Extension;
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Plugin\CMSPlugin;
-use Joomla\CMS\Event\Content\ContentPrepareEvent;
+use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
 use Joomla\CMS\Factory;
 
@@ -27,16 +27,14 @@ class Dropboxembed extends CMSPlugin implements SubscriberInterface
       ];
     }
 
-  public function replaceDropboxTags(ContentPrepareEvent $event)
+  public function replaceDropboxTags(Event $event)
     {
     if (!$this->getApplication()->isClient('site'))
       {
       return; //Exit if this request is from the backend (administrator)
       }
-
-    $context = $event->getContext();
-    $item = $event->getItem();
-    $params = $event->getParams();
+     
+    [$context, $item, $params, $page] = array_values($event->getArguments());
 
     if ($context === 'com_finder.indexer')
       {
