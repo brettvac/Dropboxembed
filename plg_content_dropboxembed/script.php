@@ -1,7 +1,6 @@
 <?php
 /**
  * @package     Dropbox Embed Plugin
- * @copyright   (C) Brett Vachon
  * @license     GNU General Public License version 2
  */
 
@@ -11,43 +10,28 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Installer\InstallerAdapter;
 use Joomla\CMS\Installer\InstallerScriptInterface;
-use Joomla\Database\DatabaseInterface;
 use Joomla\CMS\Language\Text;
 
 return new class () implements InstallerScriptInterface {
 
     private string $minimumJoomla = '4.4.0';
-    private string $minimumPhp    = '7.4.0';
-    private DatabaseInterface $db;
-
-    public function __construct()
-    {
-        $this->db = Factory::getContainer()->get(DatabaseInterface::class);
-    }
+    private string $minimumPhp    = '7.2.5';
 
     public function install(InstallerAdapter $adapter): bool
     {
-        // Enable the plugin on installation
-        $query = $this->db->getQuery(true)
-            ->update($this->db->quoteName('#__extensions'))
-            ->set($this->db->quoteName('enabled') . ' = 1')
-            ->where($this->db->quoteName('type') . ' = ' . $this->db->quote('plugin'))
-            ->where($this->db->quoteName('folder') . ' = ' . $this->db->quote($adapter->group))
-            ->where($this->db->quoteName('element') . ' = ' . $this->db->quote($adapter->element));
-        $this->db->setQuery($query)->execute();
-
+        Factory::getApplication()->enqueueMessage(Text::_('PLG_CONTENT_DROPBOXEMBED_INSTALL'), 'success');
         return true;
     }
 
     public function update(InstallerAdapter $adapter): bool
     {
-        echo Text::_('PLG_CONTENT_DROPBOXEMBED_UPDATE') . "<br>";
+        Factory::getApplication()->enqueueMessage(Text::_('PLG_CONTENT_DROPBOXEMBED_UPDATE'), 'success');
         return true;
     }
 
     public function uninstall(InstallerAdapter $adapter): bool
     {
-        echo Text::_('PLG_CONTENT_DROPBOXEMBED_UNINSTALL') . "<br>";
+        Factory::getApplication()->enqueueMessage(Text::_('PLG_CONTENT_DROPBOXEMBED_UNINSTALL'), 'info');
         return true;
     }
 
@@ -72,7 +56,7 @@ return new class () implements InstallerScriptInterface {
 
     public function postflight(string $type, InstallerAdapter $adapter): bool
     {
-        echo Text::_('PLG_CONTENT_DROPBOXEMBED_POSTFLIGHT') . "<br>";
+        Factory::getApplication()->enqueueMessage(Text::_('PLG_CONTENT_DROPBOXEMBED_POSTFLIGHT'), 'info');
         return true;
     }
 };

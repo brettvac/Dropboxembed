@@ -6,20 +6,25 @@
   <copyright>(C) Brett Vachon.</copyright>
   <license>GNU General Public License version 2</license>
   <authorUrl>https://naftee.com</authorUrl>
-  <version>1.0</version>
+  <version>1.1</version>
   <description>PLG_CONTENT_DROPBOXEMBED_DESCRIPTION</description>
+  
   <namespace path="src">Naftee\Plugin\Content\Dropboxembed</namespace>
+  
   <scriptfile>script.php</scriptfile>
+  
   <files>
     <folder plugin="dropboxembed">services</folder>
     <folder>src</folder>
   </files>
+  
   <languages>
     <language tag="en-GB">language/en-GB/plg_content_dropboxembed.ini</language>
     <language tag="en-GB">language/en-GB/plg_content_dropboxembed.sys.ini</language>
     <language tag="fr-FR">language/fr-FR/plg_content_dropboxembed.ini</language>
     <language tag="fr-FR">language/fr-FR/plg_content_dropboxembed.sys.ini</language>
   </languages>
+  
   <config>
     <fields name="params">
       <fieldset name="basic">
@@ -29,7 +34,7 @@
           label="PLG_CONTENT_DROPBOXEMBED_APP_KEY_LABEL"
           description="PLG_CONTENT_DROPBOXEMBED_APP_KEY_DESC"
           default=""
-          size="40"
+          size="50"
         />
 
         <field 
@@ -67,7 +72,8 @@
       </fieldset>
     </fields>
   </config>
+  
   <updateservers>
-    <server name="Dropbox Embed" type="extension">https://raw.githubusercontent.com/brettvac/Dropboxembed/refs/heads/main/update/updates.xml</server>
+    <server name="Dropbox Embed Updates" type="extension">https://raw.githubusercontent.com/brettvac/Dropboxembed/refs/heads/main/update/updates.xml</server>
   </updateservers>
 </extension>

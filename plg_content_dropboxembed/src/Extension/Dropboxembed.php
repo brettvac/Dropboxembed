@@ -1,6 +1,7 @@
 <?php
 /**
  * @package    Dropbox Embed Plugin
+ * @version    1.1
  * @license    GNU General Public License version 2
  */
 
@@ -75,9 +76,18 @@ class Dropboxembed extends CMSPlugin implements SubscriberInterface
 
     while (($start = strpos($text, "{dropbox}", $offset)) !== false)
       {
-      if (($end = strpos($text, "{/dropbox}", $start)) === false)
+      $end = strpos($text, "{/dropbox}", $start); // Search forward from the current opening tag position for next closing tag
+
+      if ($end === false)
         {
-        break; // Skip if no closing {/dropbox} tag is found
+        break;   // Exit early: missing closing tag
+        }
+        
+      $nextOpening = strpos($text, "{dropbox}",   $start + 9); // Search for another opening tag {dropbox} that starts after the current one
+      
+      if ($nextOpening !== false && $nextOpening < $end) 
+        {
+        break;   // Prevent any nested tag processing
         }
 
       /*
@@ -93,7 +103,10 @@ class Dropboxembed extends CMSPlugin implements SubscriberInterface
        * trim() removes any leading/trailing whitespace
        */
       $tagContent = trim(substr($text, $start + 9, $end - $start - 9));
-
+      
+      // Remove the surrounding hyperlink if the editor added it
+      $tagContent = strip_tags($tagContent);
+      
       // Initialize $dropboxUrl with $tagContent as a fallback. This ensures $dropboxUrl has a value if no | separator is present
       $height = '100%';
       $width = '100%';
