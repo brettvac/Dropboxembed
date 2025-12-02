@@ -17,7 +17,7 @@ You can also adjust height and width options for maximum viewer experience.
 How To Install The Dropbox Embed Content Plugin
 ------------
 
-1. You will need to create a Dropbox App and get your API key. Go to [https://www.dropbox.com/developers/apps/create](https://www.dropbox.com/developers/apps/create) to set this up.
+1. You will need to create a Dropbox App and get your App Key. Go to [https://www.dropbox.com/developers/apps/create](https://www.dropbox.com/developers/apps/create) to set this up.
 2. Install the plugin through the Joomla! Extensions Manager. You can use this URL to install the latest release: [https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip](https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip)
 3. Configure the plugin settings by entering your Dropbox App Key & choosing your layout preferences.
 
