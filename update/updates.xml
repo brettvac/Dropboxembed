@@ -1,6 +1,6 @@
 <updates>
     <update>
-        <name>Dropbox Embed Content Plugin</name>
+        <name>Dropbox Embed</name>
         <description>Dropbox Embed is a Joomla! plugin that allows you to use the Dropbox Embedder in Joomla! content with a shortcode.</description>
         <element>plg_content_dropboxembed</element>
         <type>plugin</type>
@@ -13,9 +13,6 @@
             </downloadurl>
         </downloads>
         <infourl>https://github.com/brettvac/dropboxembed/releases/tag/1.2</infourl>
-        <maintainer>Brett Vac</maintainer>
-        <maintainerurl>https://github.com/brettvac</maintainerurl>
-        <section>Updates</section>
         <targetplatform name="joomla" version="5.*|6.*"/>
         <php_minimum>8.1.0</php_minimum>
     </update>
@@ -34,9 +31,6 @@
             </downloadurl>
         </downloads>
         <infourl>https://github.com/brettvac/dropboxembed/releases/tag/1.2</infourl>
-        <maintainer>Brett Vac</maintainer>
-        <maintainerurl>https://github.com/brettvac</maintainerurl>
-        <section>Updates</section>
         <targetplatform name="joomla" version="5.*|6.*"/>
         <php_minimum>8.1.0</php_minimum>
     </update>
