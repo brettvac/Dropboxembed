@@ -4,6 +4,9 @@
  * @license    GNU General Public License version 2
  */
 
+// No direct access
+\defined('_JEXEC') or die;
+
 use Joomla\CMS\Extension\PluginInterface;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;

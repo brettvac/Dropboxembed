@@ -1,16 +1,17 @@
 <?php
 /**
  * @package    Dropbox Embed Plugin
- * @version    1.1
+ * @version    1.2
  * @license    GNU General Public License version 2
  */
 
 namespace Naftee\Plugin\Content\Dropboxembed\Extension;
 
+// No direct access
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Plugin\CMSPlugin;
-use Joomla\Event\Event;
+use Joomla\CMS\Event\Content\ContentPrepareEvent;
 use Joomla\Event\SubscriberInterface;
 use Joomla\CMS\Factory;
 
@@ -28,14 +29,16 @@ class Dropboxembed extends CMSPlugin implements SubscriberInterface
       ];
     }
 
-  public function replaceDropboxTags(Event $event)
+  public function replaceDropboxTags(ContentPrepareEvent $event)
     {
     if (!$this->getApplication()->isClient('site'))
       {
       return; //Exit if this request is from the backend (administrator)
       }
      
-    [$context, $item, $params, $page] = array_values($event->getArguments());
+    $context = $event->getContext();
+    $item    = $event->getItem();
+    $params  = $event->getParams();
 
     if ($context === 'com_finder.indexer')
       {
