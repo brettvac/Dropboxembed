@@ -1,30 +1,35 @@
-Dropbox Embed - Joomla! Content Plugin
-============
+# Dropbox Embed Joomla! Content Plugin
 
 ![Dropbox Embed](Dropboxembed.jpg)
 
-Dropbox Embed is a Joomla! content plugin that allows you to embed Dropbox files and folders into your Joomla! website using a simple shortcode.
+Dropbox Embed is a Joomla! content plugin that [harnesses the power of the Dropbox Embedder](https://dropbox.tech/developers/now-available--dropbox-embedder) to allow you to embed Dropbox files and folders into your Joomla! website content using a simple shortcode.
 
-Why Use Dropbox Embed?
-------------
+## Why Use Dropbox Embed?
 
-Instead of manually copying and pasting Dropbox links into your Joomla! content, this plugin lets you embed Dropbox files and folders directly.
+If you have a file or folder on Dropbox and you want to display this content directly on your Joomla! site, you can use the Dropbox Embedder instead of manually copying and pasting Dropbox links into your Joomla! content. 
 
-No more fiddling with HTML code; just use the shortcode and insert the Dropbox file folder link. 
+The Dropbox Embed plugin lets you embed Dropbox files and folders directly using a shortcode, instead of adding JavaScript and HTML directly into the editor or template file.
 
-You can also adjust height and width options for maximum viewer experience.
+With the Dropbox Embed plugin, no more fiddling with HTML code--just use the shortcode and insert the Dropbox file or folder link. 
 
-How To Install The Dropbox Embed Content Plugin
-------------
+You can also adjust height and width options in the plugin options for maximum viewer experience.
 
-1. You will need to create a Dropbox App and get your App Key. Go to [https://www.dropbox.com/developers/apps/create](https://www.dropbox.com/developers/apps/create) to set this up.
-2. Install the plugin through the Joomla! Extensions Manager. You can use this URL to install the latest release: [https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip](https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip)
+## How To Install The Dropbox Embed Content Plugin
+
+1. Go to [https://www.dropbox.com/developers/apps/create](https://www.dropbox.com/developers/apps/create) and follow the instructions to create a Dropbox App and get your App Key.
+2. Install the plugin via the Joomla! Extensions Manager--you can use this URL to install the latest release: [https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip](https://github.com/brettvac/dropboxembed/releases/latest/download/plg_content_dropboxembed.zip)
 3. Configure the plugin settings by entering your Dropbox App Key & choosing your layout preferences.
+4. Enable the plugin.
 
-How To Use The Dropbox Embed Content Plugin
-------------
+## How To Use The Dropbox Embed Content Plugin
 
-Inside Dropbox, create & copy a share link for the folder or file that you want to share. Remember to include the rlkey parameter. Then, use the following shortcode in your content:
+1. Inside your Dropbox, upload or create your content.
+2. Copy a share link for the folder or file that you want to share (remember to include the rlkey parameter)
+3. Then, use the following shortcode in your content: `{dropbox}DROPBOX_LINK{/dropbox}`
+
+### Style Options
+
+You can control the width and height of the iframe which displays the Dropbox content directly in the shortcode as follows:
 
 ```
 {dropbox}DROPBOX_LINK|HEIGHT|WIDTH{/dropbox}
@@ -43,14 +48,12 @@ You can also customize the embed by adding optional height and width parameters 
 ```
 {dropbox}https://www.dropbox.com/scl/fo/5pu6lcznlqushows1gluk/AOuhBExMHsO0lGM5AqU5d2Y?rlkey=d113ffnzhu8vseecxxe61ddk3|500|800{/dropbox}
 ```
+
 ## Features
 - Supports embedding both files and folders.
 - Allows customization of embedded document (height and width) and appearance of the files.
 - Ensures the Dropbox embed script is only loaded once per page.
 - Compatible with Joomla! articles, modules and extensions that support Prepare Content
-
-## Requirements
-This plugin requires Joomla versions greater than 4.4 and PHP 7.2.5.
 
 ## FAQ
 **Q: It's not working!**  
@@ -66,8 +69,5 @@ This plugin requires Joomla versions greater than 4.4 and PHP 7.2.5.
 
 `Eth 0xC9b695D4712645Ba178B4316154621B284e2783D`
 
-**Q: Got any more awesome Joomla! plugins?**  
-**A:** Find them [right here](https://naftee.com)
-
-## Contributing / Further Reading
+## Further Reading
 Read the **Dropbox Embedder Documentation** at [https://www.dropbox.com/developers/embedder](https://www.dropbox.com/developers/embedder)
