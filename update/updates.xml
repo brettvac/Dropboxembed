@@ -15,7 +15,7 @@
         <infourl>
            https://github.com/brettvac/dropboxembed/releases/tag/1.2
         </infourl>
-        <targetplatform name="joomla" version="(5)|(6)" />
+        <targetplatform name="joomla" version="5.[1234]|6.[123456789]" />
         <php_minimum>8.1.0</php_minimum>
     </update>
 </updates>
