@@ -2,7 +2,7 @@
     <update>
         <name>Dropbox Embed Updates</name>
         <description>Dropbox Embed is a Joomla! plugin that allows you to use the Dropbox Embedder in Joomla! content with a shortcode.</description>
-        <element>plg_content_dropboxembed</element>
+        <element>dropboxembed</element>
         <type>plugin</type>
         <folder>content</folder>
         <version>1.2</version>
