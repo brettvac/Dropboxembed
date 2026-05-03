@@ -14,7 +14,9 @@
             </downloadurl>
         </downloads>
         
-        <infourl>https://github.com/brettvac/dropboxembed/releases/tag/1.2</infourl>
+        <infourl title="Dropbox Embed GitHub Repository">https://github.com/brettvac/dropboxembed</infourl>
+
+        <changelogurl>https://github.com/brettvac/dropboxembed/releases/tag/1.2</changelogurl>
         
         <targetplatform name="joomla" version="5\..*|6\..*"/>
         <php_minimum>8.1.0</php_minimum>
