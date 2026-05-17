@@ -6,9 +6,9 @@
         <version>1.2</version>
 
         <fix>
-            <item>Replaced the generic Joomla! event with <![CDATA[ContentPrepareEvent]]> for improved event handling.</item>
-            <item>Replaced calls to <![CDATA[$event->getArguments()]]> with individual event method calls.</item>
-            <item>Removed unused <![CDATA[$page]]> variable.</item>
+            <item><![CDATA[Replaced the generic Joomla! event with ContentPrepareEvent for improved event handling.]]></item>
+            <item><![CDATA[Replaced calls to $event->getArguments() with individual event method calls.]]></item>
+            <item><![CDATA[Removed unused $page variable.]]></item>
             <item>Updated all XML version references and code blocks to version 1.2.</item>
         </fix>
 
@@ -40,7 +40,7 @@
         </fix>
 
         <change>
-            <item>Changed the release ZIP file name to <![CDATA[plg_content_dropboxembed]]>.</item>
+            <item><![CDATA[Changed the release ZIP file name to plg_content_dropboxembed.]]></item>
             <item>Removed database calls that automatically enabled the plugin after installation.</item>
         </change>
 
