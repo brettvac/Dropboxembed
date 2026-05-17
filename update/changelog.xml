@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <changelogs>
     <changelog>
-        <element>plg_content_dropboxembed</element>
+        <element>dropboxembed</element>
         <type>plugin</type>
-        <version>1.2.0</version>
+        <version>1.2</version>
 
         <fix>
             <item>Replaced the generic Joomla! event with <![CDATA[ContentPrepareEvent]]> for improved event handling.</item>
@@ -23,6 +24,43 @@
 
         <note>
             <item>This release modernizes the plugin for Joomla! 5 compatibility.</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>dropboxembed</element>
+        <type>plugin</type>
+        <version>1.1</version>
+
+        <fix>
+            <item>Exit early on nested Dropbox embed tags to prevent duplicate processing.</item>
+            <item>Corrected plugin language strings.</item>
+            <item>Strip hyperlinks automatically added by editors from Dropbox embed URLs.</item>
+            <item>Fixed installer script output formatting.</item>
+        </fix>
+
+        <change>
+            <item>Changed the release ZIP file name to <![CDATA[plg_content_dropboxembed]]>.</item>
+            <item>Removed database calls that automatically enabled the plugin after installation.</item>
+        </change>
+
+        <note>
+            <item>This maintenance release improves installation behavior and content processing reliability.</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>dropboxembed</element>
+        <type>plugin</type>
+        <version>1.0</version>
+
+        <add>
+            <item>Initial release of the Dropbox Embed content plugin.</item>
+            <item>Added support for embedding Dropbox content directly into Joomla! articles.</item>
+        </add>
+
+        <note>
+            <item>First public release.</item>
         </note>
     </changelog>
 </changelogs>
