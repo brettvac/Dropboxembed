@@ -6,7 +6,7 @@
         <version>1.2</version>
 
         <fix>
-            <item><![CDATA[Replaced the generic Joomla! event with ContentPrepareEvent for improved event handling.]]></item>
+            <item>Replaced the generic Joomla! event with ContentPrepareEvent for improved event handling.</item>
             <item><![CDATA[Replaced calls to $event->getArguments() with individual event method calls.]]></item>
             <item><![CDATA[Removed unused $page variable.]]></item>
             <item>Updated all XML version references and code blocks to version 1.2.</item>
@@ -15,8 +15,8 @@
         <change>
             <item>Removed the author URL from the manifest file.</item>
             <item>Reordered manifest elements to align with the Joomla! plugin tutorial structure.</item>
-            <item>Updated plugin language strings to remove the “Content Plugin” reference.</item>
             <item>Renamed the manifest file to use the full plugin name.</item>
+            <item><![CDATA[Updated plugin language strings to remove the &quot;Content Plugin&quot; reference.]]></item>
             <item>Updated the scriptfile configuration to remove Joomla! 4 references and increase the minimum PHP version.</item>
             <item>Clarified the plugin functionality description in language files and the update server definition.</item>
             <item>Updated the update server definition to remove Joomla! 4 support and start at Joomla! 5.</item>
